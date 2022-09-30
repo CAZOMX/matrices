@@ -16,8 +16,8 @@ int main()
         system("cls");
         cout << "\n\nMenu de Opciones" << endl;
         cout << "1. multiplicar una matriz" << endl;
-        cout << "2. Seuma de matrices" << endl;
-        cout << "3. Funciones Trigonometricas" << endl;
+        cout << "2. Suma de matrices" << endl;
+        cout << "3. " << endl;
         cout << "4. Opcion 4" << endl;
         cout << "0. SALIR" << endl;
 
@@ -95,7 +95,50 @@ int main()
 
         case 2:
                   
+            int r, c, a[100][100], b[100][100], sum[100][100], i, j;
 
+            cout << "Ingresa un Numero de Filas (entre 1 y 100): ";
+            cin >> r;
+
+            cout << "Ingresa un Numero de Columnas  (entre 1 y 100): ";
+            cin >> c;
+
+            cout << endl << "Ingresa los elementos de la matriz A" << endl;
+
+            // Storing elements of first matrix entered by user.
+            for (i = 0; i < r; ++i)
+                for (j = 0; j < c; ++j)
+                {
+                    cout << "Ingresa los elemento A" << i + 1 << j + 1 << " : ";
+                    cin >> a[i][j];
+                }
+
+            // Storing elements of second matrix entered by user.
+            cout << endl << "Ingresa los elementos de la matriz B" << endl;
+            for (i = 0; i < r; ++i)
+                for (j = 0; j < c; ++j)
+                {
+                    cout << "Ingresa el elemento B" << i + 1 << j + 1 << " : ";
+                    cin >> b[i][j];
+                }
+
+            // Adding Two matrices
+            for (i = 0; i < r; ++i)
+                for (j = 0; j < c; ++j)
+                    sum[i][j] = a[i][j] + b[i][j];
+
+            // Displaying the resultant sum matrix.
+            cout << endl << "------------------El resultado de la suma es:------------ " << endl;
+            for (i = 0; i < r; ++i)
+                for (j = 0; j < c; ++j)
+                {
+                    cout << sum[i][j] << "  ";
+                    if (j == c - 1)
+                        cout << endl;
+                }
+
+            return 0;
+        
             system("pause>nul"); 
             break;
 
