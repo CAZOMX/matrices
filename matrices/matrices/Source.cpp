@@ -2,6 +2,7 @@
 #include <iostream>
 #include <cstdlib>
 #include<math.h>
+#include <cmath>
 #define PI 3.14159265
 
 
@@ -17,8 +18,7 @@ int main()
         cout << "\n\nMenu de Opciones" << endl;
         cout << "1. multiplicar una matriz" << endl;
         cout << "2. Suma de matrices" << endl;
-        cout << "3. " << endl;
-        cout << "4. Opcion 4" << endl;
+        cout << "3. Funciones trigonométricas" << endl;
         cout << "0. SALIR" << endl;
 
         cout << "\nIngrese una opcion: ";
@@ -143,15 +143,20 @@ int main()
             break;
 
         case 3:
-            // Lista de instrucciones de la opción 3                
+            double x;
+            cout << "\n\nIngrese un angulo en grados:";
+            cin >> x;
+            double rad, seno, coseno, tang;
+            rad = x * PI / 180;
+            seno = sin(rad);
+            coseno = cos(rad);
+            tang = tan(rad);
+            cout << "El seno es: " << seno << "\n";
+            cout << "El coseno es: " << coseno << "\n";
+            cout << "La tangente es: " << tang << "\n";
+           
 
             system("pause>nul"); // Pausa            
-            break;
-
-        case 4:
-            // Lista de instrucciones de la opción 4                
-
-            system("pause>nul"); // Pausa                
             break;
 
         case 0:
